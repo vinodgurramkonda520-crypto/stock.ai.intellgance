@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>VINOD BUSINESS AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F4B;--royal:#1F4FD8;--gold:#C9A24B;--bg:#F4F6FB;--card:#fff;--tx:#14213d;--mut:#5b6785;--bd:#dfe4f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme=light]){}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0a1226;--card:#121c3a;--tx:#eef1fa;--mut:#9aa6c9;--bd:#243158}}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{font:15px/1.5 'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);display:flex}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0 0 .4em}
+aside{width:236px;background:var(--navy);color:#fff;padding:16px 10px;display:flex;flex-direction:column;gap:2px;overflow:auto;transition:.2s}
+aside.c{width:0;padding:0;overflow:hidden}
+.logo{font:700 18px Fraunces,serif;padding:6px 10px 14px;color:var(--gold);line-height:1.2}.logo small{display:block;color:#b9c4e6;font:400 11px 'DM Sans'}
+nav button{all:unset;display:block;width:100%;padding:10px 12px;border-radius:8px;cursor:pointer;color:#cdd6f2}
+nav button:hover{background:#17306b}nav button.on{background:var(--royal);color:#fff;box-shadow:inset 3px 0 var(--gold)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+main{flex:1;overflow:auto;min-width:0}
+.top{display:flex;align-items:center;gap:10px;padding:12px 20px;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:5}
+.top b{flex:1}.tag{background:#fff3d6;color:#7a5a10;padding:2px 9px;border-radius:99px;font-size:12px}
+.pg{padding:20px;max-width:1100px;margin:auto}.sec{display:none}.sec.on{display:block}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.two{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;box-shadow:0 1px 3px rgba(11,31,75,.08)}
+.stat b{font:700 30px Fraunces,serif;color:var(--royal);display:block}.stat span{color:var(--mut)}
+label{display:block;font-weight:500;margin:10px 0 3px;font-size:13px}
+input,select,textarea{width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+textarea{min-height:150px;resize:vertical}
+.btn{background:var(--royal);color:#fff;border:0;padding:9px 16px;border-radius:8px;cursor:pointer;font:500 14px 'DM Sans';margin:10px 6px 0 0}
+.btn:hover{background:var(--navy)}.btn.g{background:var(--gold);color:#1b1500}.btn.o{background:transparent;color:var(--royal);border:1px solid var(--royal)}.btn.s{padding:4px 9px;margin:0 3px 0 0;font-size:12px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--bd);font-size:14px}.tw{overflow-x:auto}
+.pill{padding:2px 9px;border-radius:99px;font-size:12px;background:#e4ebff;color:#1b3a9e}
+.note{background:#fff3d6;color:#6b4e0c;border-left:3px solid var(--gold);padding:8px 12px;border-radius:6px;font-size:13px;margin-bottom:14px}
+.empty{text-align:center;color:var(--mut);padding:24px}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:9px 16px;border-radius:8px;opacity:0;transition:.2s;pointer-events:none;z-index:9}#toast.on{opacity:1}
+.chat{height:300px;overflow:auto;border:1px solid var(--bd);border-radius:8px;padding:10px;background:var(--bg)}.m{margin:6px 0;padding:8px 11px;border-radius:10px;max-width:88%;white-space:pre-wrap}.m.u{background:var(--royal);color:#fff;margin-left:auto}.m.a{background:var(--card);border:1px solid var(--bd)}
+canvas,iframe{width:100%;border:1px solid var(--bd);border-radius:10px;background:#fff}iframe{height:520px}
+.chip{display:inline-block;margin:3px 4px 0 0;padding:4px 10px;border:1px solid var(--gold);border-radius:99px;cursor:pointer;background:none;color:var(--tx);font:inherit;font-size:13px}
+@media(max-width:760px){aside{position:fixed;z-index:20;height:100%}aside.c{width:0}}
+</style></head><body>
+<aside id="sb"><div class="logo">VINOD BUSINESS AI<small>Create Smarter. Market Better. Grow Faster.</small></div><nav id="nav"></nav></aside>
+<main><div class="top"><button class="btn o s" id="tg" aria-label="Toggle menu">☰ Menu</button><b id="ttl">Dashboard</b><span class="tag">Prototype · demo mode</span></div><div class="pg">
+<div class="note">Prototype: content is generated from built-in templates (no live AI connected). Leads are saved only in this browser, if storage is allowed. Nothing is sent to customers automatically.</div>
+
+<section class="sec on" id="dash"><h2>Welcome, G Vinod Kumar</h2><p style="color:var(--mut)">Hyderabad, India · 7989050723 · Figures below are demo data.</p>
+<div class="grid" id="stats"></div><div class="grid two" style="margin-top:14px"><div class="card"><h3>Quick actions</h3><div id="qa"></div></div><div class="card"><h3>Recent activity</h3><div id="act"></div></div></div></section>
+
+<section class="sec" id="gen"><h2>AI Marketing Content Generator</h2><div class="grid two"><div class="card">
+<label>Content type</label><select id="g_t"><option>Instagram post</option><option>Facebook post</option><option>LinkedIn post</option><option>WhatsApp message</option><option>Advertisement caption</option><option>Professional email</option><option>Slogans</option></select>
+<label>Business type</label><input id="g_b" value="Business consulting & digital marketing">
+<label>Target audience</label><input id="g_a" value="Startups and small businesses">
+<label>Language</label><select id="g_l"><option>English</option><option>Telugu (English letters)</option><option>Telugu (script)</option></select>
+<label>Style</label><select id="g_s"><option>Professional</option><option>Friendly</option><option>Premium</option><option>Persuasive</option></select>
+<label>Objective</label><input id="g_o" value="Get new client inquiries">
+<label>Target country</label><input id="g_c" value="India">
+<button class="btn" id="g_go">Generate content</button></div>
+<div class="card"><label for="g_out">Result (editable)</label><textarea id="g_out" placeholder="Your generated content appears here."></textarea><button class="btn g" data-copy="g_out">Copy</button></div></div></section>
+
+<section class="sec" id="poster"><h2>Poster & Advertisement Studio</h2><div class="grid two"><div class="card">
+<label>Design</label><select id="p_k"><option value="poster">Promotional poster</option><option value="card">Digital visiting card</option><option value="offer">Festival / special offer</option></select>
+<label>Headline</label><input id="p_h" value="Grow Your Business Online"><label>Description</label><input id="p_d" value="Marketing, websites and lead generation for you">
+<label>Contact</label><input id="p_c" value="G Vinod Kumar · 7989050723 · Hyderabad"><label>Theme</label><select id="p_t"><option value="navy">Navy & Gold</option><option value="royal">Royal Blue</option><option value="light">White & Navy</option></select>
+<button class="btn" id="p_dl">Download PNG</button></div><div class="card"><canvas id="cv" width="800" height="800"></canvas></div></div></section>
+
+<section class="sec" id="web"><h2>Business Website Builder</h2><div class="grid two"><div class="card">
+<label>Business name</label><input id="w_n" value="Vinod Business Solutions"><label>Services (comma separated)</label><input id="w_s" value="Digital marketing, Business consulting, Website creation">
+<label>Description</label><textarea id="w_d" style="min-height:70px">We help entrepreneurs grow with clear strategy and modern marketing.</textarea>
+<label>Contact</label><input id="w_c" value="7989050723 · Hyderabad, India"><label>Target country</label><input id="w_t" value="India">
+<label>Brand color</label><input type="color" id="w_k" value="#1F4FD8"><button class="btn" id="w_go">Generate preview</button><button class="btn o" id="w_dl">Download HTML</button></div>
+<div class="card"><iframe id="w_f" title="Website preview"></iframe></div></div></section>
+
+<section class="sec" id="crm"><h2>Leads & Client Management</h2><div class="grid two"><div class="card"><h3 id="l_h">Add lead</h3><input type="hidden" id="l_id">
+<label>Name *</label><input id="l_n"><label>Phone *</label><input id="l_p"><label>Email</label><input id="l_e" type="email"><label>Country</label><input id="l_c" value="India">
+<label>Interested service</label><input id="l_sv"><label>Status</label><select id="l_st"><option>New</option><option>Contacted</option><option>Interested</option><option>Converted</option><option>Lost</option></select>
+<label>Follow-up date</label><input type="date" id="l_f"><label>Notes</label><input id="l_no"><button class="btn" id="l_sav">Save lead</button><button class="btn o" id="l_rs">Reset demo data</button><div id="l_err" style="color:#b00020"></div></div>
+<div class="card"><input id="l_q" placeholder="Search leads…" aria-label="Search"><select id="l_fl" style="margin-top:8px"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Interested</option><option>Converted</option><option>Lost</option></select><div class="tw"><table><tbody id="l_tb"></tbody></table></div></div></div></section>
+
+<section class="sec" id="prop"><h2>Proposals & Presentations</h2><div class="grid two"><div class="card">
+<label>Document</label><select id="r_k"><option>Business proposal</option><option>Presentation outline</option><option>Company profile</option><option>Partnership proposal</option><option>International outreach email</option></select>
+<label>Client / company</label><input id="r_c" value="ABC Traders"><label>Service offered</label><input id="r_s" value="Digital marketing package"><label>Tone</label><select id="r_t"><option>Formal</option><option>Friendly</option><option>Premium</option><option>Persuasive</option></select>
+<button class="btn" id="r_go">Generate</button></div><div class="card"><label for="r_out">Result (editable)</label><textarea id="r_out"></textarea><button class="btn g" data-copy="r_out">Copy</button></div></div></section>
+
+<section class="sec" id="edu"><h2>Stock Market Education</h2><div class="note">Educational only. Not investment advice. No profits are promised and no live market data is shown.</div><div class="grid two" id="edu_g"></div></section>
+
+<section class="sec" id="cop"><h2>Vinod Growth Copilot</h2><div class="card"><div id="chips"></div><div class="chat" id="chat" aria-live="polite"></div>
+<div style="display:flex;gap:8px;margin-top:8px"><input id="c_in" placeholder="Ask how to grow your business…"><button class="btn" id="c_go" style="margin:0">Ask</button></div>
+<p style="font-size:12px;color:var(--mut)">Template-based demo. The Copilot only drafts text — it never sends messages.</p></div></section>
+</div></main><div id="toast" role="status"></div>
+<script>
+const $=id=>document.getElementById(id),pages=[['dash','Dashboard'],['gen','Content Generator'],['poster','Poster Studio'],['web','Website Builder'],['crm','Leads & Clients'],['prop','Proposals'],['edu','Stock Market Education'],['cop','Growth Copilot']];
+let made=0,acts=['Demo: lead "Ravi Teja" added','Demo: WhatsApp message drafted','Demo: proposal generated for ABC Traders'];
+const demo=()=>[{id:1,n:'Ravi Teja',p:'9000000001',e:'ravi@example.com',c:'India',sv:'Digital marketing',st:'New',f:'',no:'Sample'},{id:2,n:'Anita Rao',p:'9000000002',e:'anita@example.com',c:'India',sv:'Website',st:'Interested',f:new Date(Date.now()+864e5).toISOString().slice(0,10),no:'Sample'},{id:3,n:'John Smith',p:'+1000000003',e:'john@example.com',c:'USA',sv:'Consulting',st:'Converted',f:'',no:'Sample'},{id:4,n:'Meera K',p:'9000000004',e:'',c:'UAE',sv:'Branding',st:'Contacted',f:new Date().toISOString().slice(0,10),no:'Sample'}];
+let leads;try{leads=JSON.parse(localStorage.getItem('vba_leads'))||demo()}catch(e){leads=demo()}
+const save=()=>{try{localStorage.setItem('vba_leads',JSON.stringify(leads))}catch(e){}};
+const toast=m=>{$('toast').textContent=m;$('toast').classList.add('on');setTimeout(()=>$('toast').classList.remove('on'),1800)};
+const log=m=>{acts.unshift(m);acts=acts.slice(0,6);dash()};
+function go(id){document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.p===id));$('ttl').textContent=pages.find(p=>p[0]===id)[1];if(innerWidth<760)$('sb').classList.add('c');if(id==='poster')draw()}
+$('nav').innerHTML=pages.map(p=>`<button data-p="${p[0]}">${p[1]}</button>`).join('');$('nav').onclick=e=>e.target.dataset.p&&go(e.target.dataset.p);
+$('tg').onclick=()=>$('sb').classList.toggle('c');if(innerWidth<760)$('sb').classList.add('c');
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{const t=$(b.dataset.copy);if(!t.value.trim())return toast('Nothing to copy yet');try{await navigator.clipboard.writeText(t.value);toast('Copied')}catch(e){t.select();document.execCommand('copy');toast('Copied')}});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function dash(){const d=new Date().toISOString().slice(0,10);const S=[['Total leads',leads.length],['New inquiries',leads.filter(l=>l.st==='New').length],['Follow-ups due',leads.filter(l=>l.f&&l.f<=d&&!['Converted','Lost'].includes(l.st)).length],['Content created',made+12],['Conversions',leads.filter(l=>l.st==='Converted').length]];
+$('stats').innerHTML=S.map(s=>`<div class="card stat"><b>${s[1]}</b><span>${s[0]} <small>(demo)</small></span></div>`).join('');
+$('qa').innerHTML=pages.slice(1).map(p=>`<button class="chip" data-p="${p[0]}">${p[1]}</button>`).join('');$('act').innerHTML=acts.map(a=>`<div style="padding:4px 0;border-bottom:1px solid var(--bd)">${esc(a)}</div>`).join('')}
+$('qa').onclick=e=>e.target.dataset.p&&go(e.target.dataset.p);
+// Generator
+const V=id=>$(id).value.trim();
+$('g_go').onclick=()=>{const b=V('g_b'),a=V('g_a'),o=V('g_o');if(!b||!a||!o)return toast('Fill business, audience and objective');const t=$('g_t').value,l=$('g_l').value,c=V('g_c')||'India',s=$('g_s').value;$('g_out').value='Generating…';
+setTimeout(()=>{let x;if(l==='Telugu (English letters)')x=`Mee ${b} vyaparanni munduku teesukellalani anukuntunnara? ${a} kosam maa sevalu ready! ${o}. Ippude sampradinchandi: 7989050723.\n— G Vinod Kumar, Hyderabad`;
+else if(l==='Telugu (script)')x=`మీ ${b} వ్యాపారాన్ని ముందుకు తీసుకెళ్లాలనుకుంటున్నారా? ${a} కోసం మా సేవలు సిద్ధం! ఇప్పుడే సంప్రదించండి: 7989050723.\n— జి వినోద్ కుమార్, హైదరాబాద్`;
+else if(t==='Professional email')x=`Subject: Helping ${a} grow in ${c}\n\nDear [Name],\n\nI am G Vinod Kumar from Hyderabad. We support ${a} with ${b}. Our goal: ${o.toLowerCase()}.\n\nMay we schedule a short call this week?\n\nRegards,\nG Vinod Kumar | 7989050723`;
+else if(t==='Slogans')x=`1. Create Smarter. Market Better. Grow Faster.\n2. ${b}, built for ${a}.\n3. Your growth partner from Hyderabad to ${c}.`;
+else if(t==='WhatsApp message')x=`Hello! 👋 This is Vinod from Hyderabad. We offer ${b} for ${a}. ${o}? Reply YES for details or call 7989050723.`;
+else x=`${s==='Premium'?'✨ ':'🚀 '}${b} made simple for ${a}.\n\nGoal: ${o}.\nWhat you get: a clear plan, quality content and steady support.\n\nMessage us today: 7989050723 | Hyderabad, India (serving ${c})\n#BusinessGrowth #Marketing #VinodBusinessAI`;
+$('g_out').value=x;made++;log(`Generated ${t} (${l})`);toast('Content ready')},500)};
+// Poster
+function draw(){const c=$('cv'),x=c.getContext('2d'),t=$('p_t').value,k=$('p_k').value;const bg={navy:['#0B1F4B','#C9A24B','#fff'],royal:['#1F4FD8','#C9A24B','#fff'],light:['#fff','#0B1F4B','#0B1F4B']}[t];
+x.fillStyle=bg[0];x.fillRect(0,0,800,800);x.strokeStyle=bg[1];x.lineWidth=6;x.strokeRect(30,30,740,740);
+const wrap=(s,y,f,col,lh)=>{x.font=f;x.fillStyle=col;let ln='';for(const w of s.split(' ')){if(x.measureText(ln+w).width>640){x.fillText(ln,70,y);y+=lh;ln=''}ln+=w+' '}x.fillText(ln,70,y);return y+lh};
+x.textBaseline='alphabetic';x.font='700 26px Georgia';x.fillStyle=bg[1];x.fillText('VINOD BUSINESS AI',70,100);
+if(k==='offer'){x.font='700 70px Georgia';x.fillStyle=bg[1];x.fillText('SPECIAL OFFER',70,200)}
+if(k==='card'){x.fillStyle=bg[2];x.font='700 54px Georgia';x.fillText('G Vinod Kumar',70,330);x.font='24px sans-serif';x.fillStyle=bg[1];x.fillText('Founder · Business Growth Consultant',70,375);x.fillStyle=bg[2];x.fillText($('p_c').value,70,460);wrap($('p_d').value,520,'22px sans-serif',bg[2],34)}
+else{let y=wrap($('p_h').value,k==='offer'?300:260,'700 64px Georgia',bg[2],76);wrap($('p_d').value,y+20,'28px sans-serif',bg[2],40);x.fillStyle=bg[1];x.fillRect(70,660,660,3);x.font='500 24px sans-serif';x.fillStyle=bg[2];x.fillText($('p_c').value,70,710)}}
+['p_k','p_h','p_d','p_c','p_t'].forEach(i=>$(i).oninput=draw);
+$('p_dl').onclick=()=>{draw();const a=document.createElement('a');a.download='vinod-poster.png';a.href=$('cv').toDataURL('image/png');a.click();log('Poster downloaded')};
+// Website
+function site(){const n=esc(V('w_n')||'Your Business'),k=V('w_k'),sv=V('w_s').split(',').map(s=>s.trim()).filter(Boolean);
+return `<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><style>body{margin:0;font-family:system-ui,sans-serif;color:#14213d}section{padding:36px 8%}.h{background:${k};color:#fff;padding:70px 8%}.h h1{font-size:36px;margin:0 0 10px}.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.c{border:1px solid #dde;border-radius:10px;padding:14px}a.b{background:#C9A24B;color:#111;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:14px}footer{background:#0B1F4B;color:#fff;padding:24px 8%}</style></head><body><div class=h><h1>${n}</h1><p>${esc(V('w_d'))}</p><a class=b href="#contact">Contact us</a></div>
+<section><h2>About</h2><p>${esc(V('w_d'))} Serving clients in ${esc(V('w_t'))}.</p></section><section><h2>Services</h2><div class=g>${sv.map(s=>`<div class=c><b>${esc(s)}</b></div>`).join('')}</div></section>
+<section><h2>Benefits</h2><div class=g><div class=c>Clear strategy</div><div class=c>Transparent communication</div><div class=c>Support after delivery</div></div></section>
+<section><h2>Testimonials (sample)</h2><div class=g><div class=c>"Sample testimonial text."<br><small>— Sample client</small></div></div></section>
+<section><h2>FAQs</h2><p><b>How do I start?</b> Contact us for a free discussion.</p><p><b>Do you work internationally?</b> Yes, we can discuss projects in ${esc(V('w_t'))} and beyond.</p></section>
+<footer id=contact><h2>Contact</h2>${esc(V('w_c'))}</footer></body></html>`}
+$('w_go').onclick=()=>{if(!V('w_n'))return toast('Enter business name');$('w_f').srcdoc=site();log('Website preview generated')};
+$('w_dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([site()],{type:'text/html'}));a.download='website.html';a.click()};
+// CRM
+function crm(){const q=V('l_q').toLowerCase(),f=$('l_fl').value;const r=leads.filter(l=>(!f||l.st===f)&&(!q||Object.values(l).join(' ').toLowerCase().includes(q)));
+$('l_tb').innerHTML=r.length?r.map(l=>`<tr><td><b>${esc(l.n)}</b><br><small>${esc(l.p)} ${esc(l.e)}<br>${esc(l.c)} · ${esc(l.sv)}${l.f?' · Follow-up '+esc(l.f):''}</small></td><td><span class=pill>${l.st}</span></td><td><button class="btn s o" data-e="${l.id}">Edit</button><button class="btn s o" data-d="${l.id}">Delete</button></td></tr>`).join(''):'<tr><td class=empty>No leads found. Add one on the left.</td></tr>'}
+$('l_tb').onclick=e=>{const d=e.target.dataset;if(d.d&&confirm('Delete this lead?')){leads=leads.filter(l=>l.id!=d.d);save();crm();dash()}
+if(d.e){const l=leads.find(x=>x.id==d.e);$('l_id').value=l.id;[['n','l_n'],['p','l_p'],['e','l_e'],['c','l_c'],['sv','l_sv'],['st','l_st'],['f','l_f'],['no','l_no']].forEach(([k,i])=>$(i).value=l[k]);$('l_h').textContent='Edit lead'}};
+$('l_sav').onclick=()=>{if(!V('l_n')||!V('l_p')){$('l_err').textContent='Name and phone are required.';return}$('l_err').textContent='';
+const o={n:V('l_n'),p:V('l_p'),e:V('l_e'),c:V('l_c'),sv:V('l_sv'),st:$('l_st').value,f:$('l_f').value,no:V('l_no')},id=$('l_id').value;
+if(id)Object.assign(leads.find(l=>l.id==id),o);else leads.unshift({id:Date.now(),...o});save();log(`Lead "${o.n}" ${id?'updated':'added'}`);
+['l_n','l_p','l_e','l_sv','l_f','l_no','l_id'].forEach(i=>$(i).value='');$('l_h').textContent='Add lead';crm();toast('Lead saved')};
+$('l_rs').onclick=()=>{leads=demo();save();crm();dash();toast('Demo data restored')};$('l_q').oninput=crm;$('l_fl').onchange=crm;
+// Proposals
+$('r_go').onclick=()=>{const c=V('r_c'),s=V('r_s');if(!c||!s)return toast('Enter client and service');const t=$('r_t').value,k=$('r_k').value,g={Formal:'Dear Sir/Madam,',Friendly:`Hi ${c} team,`,Premium:`Dear valued partner at ${c},`,Persuasive:`${c} can grow faster — here is how.`}[t];let x;
+if(k==='Presentation outline')x=`Presentation for ${c} (${t} tone)\n1. Introduction: G Vinod Kumar, Hyderabad\n2. Your challenges\n3. Our solution: ${s}\n4. Process & timeline\n5. Investment (to be confirmed)\n6. Next steps: 7989050723`;
+else if(k==='Company profile')x=`VINOD BUSINESS AI\nFounder: G Vinod Kumar · Hyderabad, India\nServices: ${s}\nFocus: individuals, startups, SMEs and international clients.\nContact: 7989050723`;
+else x=`${k.toUpperCase()}\n\n${g}\n\nI am G Vinod Kumar from Hyderabad, India. I would like to offer ${c} our ${s}.\n\nScope: discovery, plan, delivery, review.\nTimeline: [to be agreed]\nPrice: [to be agreed]\n\nI would welcome a short call to discuss.\n\nRegards,\nG Vinod Kumar | 7989050723`;
+$('r_out').value=x;made++;log(`${k} generated for ${c}`)};
+// Education
+const E=[['Basic terms','Share: part-ownership of a company. Index: a basket tracking a market. Volume: shares traded. Dividend: profit paid to shareholders. Bull/bear: rising/falling market.'],['Risk management','Never invest money you cannot afford to lose. Diversify. Decide limits before trading. Avoid borrowing to invest. Past results do not predict the future.'],['Beginner learning path','1. Learn how exchanges and brokers work. 2. Read company reports. 3. Practice on paper trading. 4. Start small only after understanding risks.'],['Career guidance','Roles: equity research analyst, risk analyst, financial planner, compliance. Explore NISM certifications and finance courses in India.'],['Content ideas','"5 market terms explained", "What is risk?", "Myths about quick profits". Always add: educational purpose only.']];
+$('edu_g').innerHTML=E.map(e=>`<div class=card><h3>${e[0]}</h3><p>${e[1]}</p></div>`).join('');
+// Copilot
+const P=['How can I promote my business today?','Write a WhatsApp message to attract new clients','Suggest a weekly marketing plan','Create an introduction for international customers','Prepare a proposal for a potential client'];
+$('chips').innerHTML=P.map(p=>`<button class=chip>${p}</button>`).join('');$('chips').onclick=e=>e.target.classList.contains('chip')&&ask(e.target.textContent);
+const A={promote:'Today: 1) Post one helpful tip on Instagram/LinkedIn. 2) Message 5 past leads. 3) Ask a happy client for a review. 4) Share your visiting card on WhatsApp status.',whatsapp:'Hello! 👋 I am Vinod from Hyderabad. We help businesses grow with marketing and websites. Want a free 15-minute discussion? Reply YES. — 7989050723',week:'Mon: tip post. Tue: client story. Wed: WhatsApp outreach. Thu: educational reel/video. Fri: offer post. Sat: follow-ups. Sun: plan next week.',intl:'Hello, I am G Vinod Kumar, founder of VINOD BUSINESS AI in Hyderabad, India. We support startups and SMEs worldwide with marketing, websites and lead generation. May I share a short proposal?',prop:'Open the Proposals tool, enter the client name and service, pick a tone and click Generate. You can then edit and copy it.'};
+function ask(q){q=q.trim();if(!q)return;const ch=$('chat');ch.innerHTML+=`<div class="m u">${esc(q)}</div>`;const l=q.toLowerCase();const a=l.includes('whatsapp')?A.whatsapp:l.includes('week')?A.week:l.includes('international')?A.intl:l.includes('proposal')?A.prop:l.includes('promot')?A.promote:'In demo mode I answer common prompts. Try the suggested chips above, or use the Content Generator for custom copy.';
+ch.innerHTML+=`<div class="m a">${esc(a)}<br><button class="btn s g" data-c="1">Copy</button></div>`;ch.scrollTop=1e9;$('c_in').value='';made++}
+$('chat').onclick=async e=>{if(e.target.dataset.c){try{await navigator.clipboard.writeText(e.target.parentElement.firstChild.textContent);toast('Copied')}catch(x){toast('Copy not allowed here')}}};
+$('c_go').onclick=()=>ask($('c_in').value);$('c_in').onkeydown=e=>e.key==='Enter'&&ask($('c_in').value);
+$('chat').innerHTML='<div class="m a">Hello! I am Vinod Growth Copilot. Pick a prompt above to get a draft.</div>';
+dash();crm();draw();go('dash');$('w_f').srcdoc=site();
+</script></body></html>
